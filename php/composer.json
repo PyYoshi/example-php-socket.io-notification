@@ -1,0 +1,7 @@
+{
+  "require": {
+    "phalcon/devtools": "dev-master",
+    "rhumsaa/uuid": "~2.8",
+    "phalcon/incubator": "dev-master"
+  }
+}

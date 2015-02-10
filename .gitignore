@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+php/composer.lock
+php/vendor/bin
+php/vendor/composer
+php/vendor/phalcon
+php/vendor/rhumsaa
+php/vendor/swiftmailer
+php/vendor/autoload.php
+
+php/vendor/ptrofimov

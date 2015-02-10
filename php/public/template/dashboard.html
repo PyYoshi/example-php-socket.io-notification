@@ -1,0 +1,35 @@
+<div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-warning">
+                <div class="panel-heading">Hi! {{ mUserInfo.username }}</div>
+                <div class="panel-body">
+                    <ul>
+                        <li ng-repeat="chat in mTimeline" class="timeline-item">
+                            <span ng-style="chat.style">{{chat.username}}: &nbsp;{{chat.message}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="messages..." ng-model="mChatObject.message">
+                <input type="hidden" ng-model="mChatObject.type"/>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" id="chat-button" ng-disabled="mChatObject.isDisabled" ng-click="onClickSendChat($event)">
+                        <span id="chat-button-label">Action</span>
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li ng-click="onClickSetChatType($event, 1)"><a>Chat: Websockets</a></li>
+                        <li ng-click="onClickSetChatType($event, 2)"><a>Chat: Ajax</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
